@@ -85,8 +85,8 @@ const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + req.params.pa
 
 app.use('/api',router);
 
-app.listen(PORT,function(){
-    
+app.listen(process.env.PORT || 4000, function(){
+    console.log('Your node js server is running on port ' + PORT);
 });
 
 app.get('/', function(req, res) {
